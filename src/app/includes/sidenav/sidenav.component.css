@@ -1,10 +1,10 @@
 aside{
-  overflow-y: auto;
+  overflow-y: scroll;
   display: block;
   width: 25%;
-  height: auto;
   background-color: azure;
   border-right: 3px solid rgb(218, 209, 209);
+  position: fixed;
 }
 li {
   list-style-type: none;

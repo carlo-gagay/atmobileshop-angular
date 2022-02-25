@@ -2,6 +2,8 @@ nav {
     background: rgb(4, 108, 168);
     padding: 15px;
     width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .cont {
