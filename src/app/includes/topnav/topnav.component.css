@@ -1,0 +1,52 @@
+nav {
+    background: rgb(4, 108, 168);
+    padding: 15px;
+    width: 100%;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-selected-value {
+    margin: 15px 0;
+}
+
+.sub-cont {
+    margin-right: 3%;
+}
+
+.menu-item {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: rgb(243, 239, 239);
+    margin-right: 10px;
+}
+
+.icon {
+    font-size: 1.8rem;
+    color: rgb(243, 239, 239);
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    background-image: url('/assets/images/logo1.png');
+}
+
+#title {
+    font-size: x-large;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.btn {
+    margin: 3px !important;
+}
+
+#menu-btn {
+    font-weight: bold;
+    color: #ffffff;
+}

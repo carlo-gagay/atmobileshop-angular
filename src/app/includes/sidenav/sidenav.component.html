@@ -1,0 +1,59 @@
+<aside>
+    <div>
+        <div class="cont">
+            <img [src]="logo1" id="logo" alt="">
+        </div>
+        <div id="user-info">
+            <strong>{{user}}</strong>
+            <p>Admin</p>
+        </div>
+        <div class="cont">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">12k</mat-button-toggle>
+            <mat-button-toggle value="italic">13k</mat-button-toggle>
+            <mat-button-toggle value="underline">12k</mat-button-toggle>
+            </mat-button-toggle-group>              
+        </div>
+    </div>
+    <section>
+        <hr>
+    </section>
+    <ul>
+        <li>
+            <div class="aside-link selected">
+                <mat-icon>dashboard</mat-icon>
+                Dashboard
+            </div>
+        </li>
+        <li>
+            <div class="aside-link">
+                <mat-icon> list_alt</mat-icon>
+                Product List
+            </div>
+        </li>
+        <li>
+            <div class="aside-link">
+                <mat-icon>shopping_cart</mat-icon>
+                Product Sales
+            </div>
+        </li>
+        <li>
+            <div class="aside-link">
+                <mat-icon> business</mat-icon>
+                Inventory
+            </div>
+        </li>
+    </ul>
+    <section>
+        <hr>
+    </section>
+    <div class="cont-block">
+        <p>This is sample sidenav footer.</p>
+        <p>
+            <small class="container">
+                This is to certify that the A.T. Repair Services passes all the requirements 
+                to be an ecommerce website.
+            </small>
+        </p>
+    </div>
+</aside>
