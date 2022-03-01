@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+
+import { CartComponent } from 'src/app/pages/cart/cart.component';
+import { ProductListComponent } from 'src/app/pages/product-list/product-list.component';
 
 @Component({
   selector: 'app-topnav',
@@ -7,12 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  title = "A.T. Repair Services";
+  title = "Repair Services";
 
-  constructor() { }
+  logo1 = "/assets/images/logo1.png";
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
+  }
+
+  openCart(): void {
+    const dialogRef = this.dialog.open(CartComponent, {
+      width: '100%',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openProductList(): void {
+    const dialogRef = this.dialog.open(ProductListComponent, {
+      width: '100%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    })
   }
 
 }

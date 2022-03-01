@@ -1,23 +1,24 @@
+
   <nav class="cont">
     <!-- toggle side bar btn -->
     <div class="sub-cont">
-        <button mat-icon-button id="menu-btn" class="btn btn-sm btn-primary" aria-label="Example icon-button with menu icon">
+        <!-- <button mat-icon-button id="menu-btn" class="btn btn-sm btn-primary" aria-label="Example icon-button with menu icon">
           <mat-icon id="menu">menu</mat-icon> 
-       </button>
-       <span class="menu-item" style="margin-left: 10px;">
-        <span id="logo"></span>
+       </button> -->
+       <a class="menu-item" href="#" style="margin-left: 10px;">
+        <img [src]="logo1" id="logo" alt="{{title}}">
         <strong id="title">{{title}}</strong>
-       </span>
+       </a>
     </div>
 
     <div class="sub-cont">
       <div class="cont" style="justify-content: space-evenly;">
 
         <div style="margin-right: 15px;"> 
-          <button class="btn btn-sm btn-success" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+          <button (click)="openCart()" class="btn btn-sm btn-light" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
             <mat-icon>shopping_cart</mat-icon>
           </button>
-          <button class="btn btn-sm btn-success">
+          <button (click)="openProductList()" class="btn btn-sm btn-light">
             <mat-icon>list</mat-icon>
           </button>
         </div>
