@@ -15,10 +15,16 @@ export class TopnavComponent implements OnInit {
 
   logo1 = "/assets/images/logo1.png";
 
+  isAsideVisible = true;
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
+  }
+
+  toggleAside() {
+    this.isAsideVisible = !this.isAsideVisible;
   }
 
   openCart(): void {
@@ -32,6 +38,7 @@ export class TopnavComponent implements OnInit {
   }
 
   openProductList(): void {
+    
     const dialogRef = this.dialog.open(ProductListComponent, {
       width: '100%'
     });

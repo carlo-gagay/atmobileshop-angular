@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>
+        <h1>{{title}}</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <nav>
+            <a routerLink="/tour-of-heroes/dashboard">Dashboard</a>
+            <a routerLink="/tour-of-heroes/heroes">Heroes</a>
+        </nav>
+        <router-outlet></router-outlet>
+        <app-messages></app-messages>
+    </mat-card-content>
+</mat-card>

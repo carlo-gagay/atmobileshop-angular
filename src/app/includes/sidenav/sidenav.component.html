@@ -1,13 +1,9 @@
-<button style="z-index: 99999;" id="toggleBtn" (click)="toggleAsside()" class="btn btn-default">
-    <mat-icon *ngIf="isVisible == false">menu</mat-icon>
-    <mat-icon *ngIf="isVisible">close</mat-icon>
-</button>
 
 <div class="row below">
     <div class="col-md-3" *ngIf="isVisible">
-        <aside class="scorllable" on>
-            <div class="scroller">        
-                <div>
+        <aside class="scrollable">
+            <div>
+                <div id="logo-container">
                     <div class="cont">
                         <img [src]="logo1" id="logo" alt="">
                     </div>
@@ -26,62 +22,67 @@
                             <mat-button-toggle value="underline">
                                 <mat-icon>edit</mat-icon>
                             </mat-button-toggle>
-                        </mat-button-toggle-group>              
+                        </mat-button-toggle-group>
                     </div>
                 </div>
                 <section>
                     <hr>
                 </section>
-                <ul>
-                    <li>
-                        <div class="aside-link" routerLink="dashboard">
-                            <mat-icon>dashboard</mat-icon>
-                            Dashboard
-                        </div>
-                    </li>
-                    <li>
-                        <div class="aside-link" routerLink="product-list">
-                            <mat-icon> list_alt</mat-icon>
-                            Product List
-                        </div>
-                    </li>
-                    <li>
-                        <div class="aside-link">
-                            <mat-icon>shopping_cart</mat-icon>
-                            Product Sales
-                        </div>
-                    </li>
-                    <li>
-                        <div class="aside-link">
-                            <mat-icon> business</mat-icon>
-                            Inventory
-                        </div>
-                    </li>
-                </ul>
                 <section>
+                    <ul>
+                        <li>
+                            <div class="aside-link" routerLink="dashboard" [ngClass]="{'selected': linkId === 1}"
+                                (click)="toggleLinks(linkId=1)">
+                                <mat-icon>dashboard</mat-icon>
+                                <span class="list-text"> Dashboard</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="aside-link" routerLink="product-list" [ngClass]="{'selected': linkId === 2}"
+                                (click)="toggleLinks(linkId=2)">
+                                <mat-icon> list_alt</mat-icon>
+                                <span class="list-text"> Product List</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="aside-link" routerLink="product-sales" [ngClass]="{'selected': linkId === 3}"
+                                (click)="toggleLinks(linkId=3)">
+                                <mat-icon>shopping_cart</mat-icon>
+                                <span class="list-text"> Product Sales</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="aside-link" routerLink="inventory" [ngClass]="{'selected' : linkId === 4}"
+                                (click)="toggleLinks(linkId=4)">
+                                <mat-icon> business</mat-icon>
+                                <span class="list-text"> Inventory</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="hide-on-small-screen">
                     <hr>
                 </section>
-                <div class="cont-block">
+                <footer class="cont-block hide-on-small-screen">
                     <div class="container">
                         <p>This is sample sidenav footer.</p>
                         <p>
                             <small class="text-center">
-                                This is to certify that the A.T. Repair Services passes all the requirements 
+                                This is to certify that the A.T. Repair Services passes all the requirements
                                 to be an ecommerce website.
                             </small>
                         </p>
                     </div>
                     <br><br>
-                </div>
+                </footer>
             </div>
+            <br><br>
         </aside>
     </div>
     <!-- end aside -->
 
     <!-- body -->
-    <div class="body" [ngClass]="{'col-md-9':isVisible,'col-md-12':!isVisible}">
+    <div class="body sidenav-item" [ngClass]="{'col-md-9':isVisible,'col-md-12':!isVisible}">
         <router-outlet></router-outlet>
     </div>
 </div>
-
---

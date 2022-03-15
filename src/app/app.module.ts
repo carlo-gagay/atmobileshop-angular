@@ -10,17 +10,26 @@ import {TestChildComponent } from './test-child/test-child.component';
 import { IncludesModule } from './includes/includes.module';
 import { PagesModule } from './pages/pages.module';
 
+import { FormsModule } from '@angular/forms';
+
+import { TourOfHeroesModule } from './tour-of-heroes/tour-of-heroes.module';
+
+import { MessageComponent } from './message/message.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    TestChildComponent
+    TestChildComponent,
+    MessageComponent
   ],
   imports: [
-    IncludesModule,
     BrowserModule,
+    IncludesModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    FormsModule,
+    TourOfHeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

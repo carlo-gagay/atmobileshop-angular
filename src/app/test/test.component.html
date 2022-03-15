@@ -1,3 +1,7 @@
-<input type="text" [name]>
+<input type="text" [(ngModel)]="name">
 
-<app-test-child [name]="name"></app-test-child>
+<app-test-child [name]="name"></app-test-child> {{name}}
+
+<button (click)="getCurrentLocation()">Click to render current location.</button>
+
+<app-message></app-message>

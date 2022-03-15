@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>
+        <mat-icon> business</mat-icon> Inventory
+    </mat-card-title>
+    <mat-card-subtitle>
+        Your e-commerse web, insights.
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let data of dataSource">
+                <mat-card>
+                    <mat-card-title>
+                        {{data.date | date}}
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{ data.content }}
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>share</mat-icon>
+                        </a>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>search</mat-icon>
+                        </a>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>download</mat-icon>
+                        </a>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

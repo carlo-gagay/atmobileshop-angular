@@ -42,7 +42,8 @@ import {MatTableModule} from '@angular/material/table';
     MatDialogModule,
     MatTableModule,
     AppRoutingModule,
-    IncludesRoutingModule
+    IncludesRoutingModule,
+    MatListModule
   ],
   exports: [
     TopnavComponent,

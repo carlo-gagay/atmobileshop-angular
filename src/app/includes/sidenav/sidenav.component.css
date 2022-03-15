@@ -1,29 +1,38 @@
 aside{
   display: block;
   top: auto;
-  /* background-color: azure; */
   border-right: 3px solid rgb(218, 209, 209);
-  position: static;
+  border-bottom: 1px solid rgb(218, 209, 209);
+}
+.scrollable {
+  overflow-y: scroll;
+  height: 100%;
+  position: fixed;
+  width: 23%;
+  scroll-behavior: smooth;
 }
 
-.scorllable {
-  overflow: scroll;
-  height: min-content;
+ul{
+  width: 100%;
+  padding: 5px;
 }
 
 li {
   list-style-type: none;
+  padding-left: 0 !important; 
+  width: 100%;
+  /* margin-left: -30px; */
 }
 .aside-link {
   font-size: 1.1rem;
-  padding: 10px;
+  padding: 4px 4px 4px 4px;
   vertical-align: bottom;
 }
 .aside-link:hover {
   cursor: pointer;
   background-color: rgb(115, 130, 143);
   color: azure;
-  border-left: 5px solid pink;
+  border-left: 5px solid rgb(179, 174, 174);
 }
 #logo {
   width: 130px;
@@ -45,23 +54,82 @@ mat-icon {
   display: block;
   text-align: center;
 }
-
 .selected {
-  border-left: 5px solid pink;
-  border-top: .3px solid pink;
-  border-bottom: .3px solid pink;
+  border-left: 5px solid rgb(115, 130, 143);
+  /* border-top: 3px solid rgb(179, 174, 174);
+  border-bottom: 3px solid rgb(179, 174, 174); */
+  background-color: rgb(115, 130, 143);
+  color: #ffff;
 }
-
 #toggleBtn {
-  float: right;
   position: fixed;
-  clear: both;
 }
 .below {
-  margin-top: 80px;
+  margin-top: 65px;
 }
 .body {
   margin-top: 2%;
   padding-left: 3%;
   padding-right: 3%;
+}
+
+mat-list-option * {
+  display: inline-block;
+}
+
+@media screen and (max-width: 900px) {
+  .scrollable {
+    /* width: 50%; */
+  }
+  .body {
+    /* width: 60% !important; */
+    /* background-color: blue; */
+  }
+
+  .list-text {   
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  /* #logo-container {
+    display: none;
+    
+  } */
+
+  .list-text {
+    display: inline;
+  }
+
+  ul{
+    text-align: center;
+  }
+  .sidenav-item {
+    display: block;
+  }
+
+  .scrollable {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .hide-on-small-screen {
+    display: none;
+  }
+
+  #toggleBtn {
+    float: right;
+    right: 0;
+    clear: both;
+    position: fixed;
+  }
 }

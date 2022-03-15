@@ -1,200 +1,33 @@
-<div class="container">
-    <mat-card>
-        <mat-card-title>Dashboard</mat-card-title>
-        <mat-card-subtitle>
-            This is subtitle
-        </mat-card-subtitle>
-        <mat-card-content>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-            <p>
-                Understanding Angular
-                To understand the capabilities of the Angular framework, you need to learn about the following:
-
-                Components
-                Templates
-                Directives
-                Dependency injection
-                The topics in this section explain these features and concepts, and how you can use them.
-            </p>
-        </mat-card-content>
-    </mat-card>
-</div>
+<mat-card>
+    <mat-card-title>
+        <mat-icon>dashboard</mat-icon> Dashboard
+    </mat-card-title>
+    <mat-card-subtitle>
+        Your e-commerse web, insights.
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let data of dataSource">
+                <mat-card>
+                    <mat-card-title>
+                        {{data.date | date}}
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{ data.content }}
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>share</mat-icon>
+                        </a>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>search</mat-icon>
+                        </a>
+                        <a class="btn-sm btn-link">
+                            <mat-icon>download</mat-icon>
+                        </a>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

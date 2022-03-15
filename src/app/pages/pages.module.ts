@@ -16,14 +16,24 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
+import { CheckoutComponent } from './product-list/checkout/checkout.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { ProductSalesComponent } from './product-sales/product-sales.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     CartComponent,
-    DashboardComponent
+    DashboardComponent,
+    CheckoutComponent,
+    InventoryComponent,
+    ProductSalesComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
     MatIconModule,
     MatButtonToggleModule,
@@ -36,6 +46,7 @@ import {MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatDialogModule,
     MatTableModule,
+    MatPaginatorModule
   ],
   exports: [
     ProductListComponent,

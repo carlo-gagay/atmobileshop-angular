@@ -1,4 +1,4 @@
-nav {
+/* nav {
     background: rgb(4, 108, 168);
     padding: 15px;
     width: 100%;
@@ -34,11 +34,6 @@ nav {
     color: rgb(243, 239, 239);
 }
 
-#logo {
-    width: 50px;
-    height: auto;
-}
-
 #title {
     font-size: x-large;
     color: #ffffff;
@@ -52,4 +47,36 @@ nav {
 #menu-btn {
     font-weight: bold;
     color: #ffffff;
+} */
+
+/* new header0 */
+
+mat-toolbar {
+    position: fixed;
+    z-index: 999;
+    background: rgb(4, 108, 168) !important;
+    top: 0;
 }
+
+button {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    color:aliceblue;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  #logo {
+      width: 50px;
+      height: auto;
+  }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,23 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  logo2:string = "/assets/images/logo2.png";
-  logo1:string = "/assets/images/logo1.png";
+  logo2: string = "/assets/images/logo2.png";
+  logo1: string = "/assets/images/logo1.png";
+
+  screen = new Observable<number>(observer => {
+    setInterval(() => observer.next(window.innerWidth), 1000)
+  })
 
   user = "A.T. Repair Services";
 
-  isVisible = true;
+  @Input() isVisible? : boolean;
 
-  semi = "col-md-9";
-  full = "col-md-12";
+  linkId: any = 1;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.screen.subscribe(width => {
+      console.log(width);
+      
+    })    
   }
 
   toggleAsside(): void {
     this.isVisible = !this.isVisible;
   }
- 
+
+  toggleLinks(id: any): void {
+    this.linkId = id;
+  }
+
+
+
 }
