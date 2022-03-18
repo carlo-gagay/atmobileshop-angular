@@ -5,5 +5,5 @@ export interface Product {
     name:string;
     description:string;
     quantity:number;
-    // price:ProductPrice
+    createdAt:any;
 }

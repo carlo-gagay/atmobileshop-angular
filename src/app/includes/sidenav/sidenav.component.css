@@ -17,6 +17,11 @@ ul{
   padding: 5px;
 }
 
+label small {
+  margin-left: 15px;
+  color: rgb(4, 108, 168);
+}
+
 li {
   list-style-type: none;
   padding-left: 0 !important; 

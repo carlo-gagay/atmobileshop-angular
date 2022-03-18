@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/internal/Observable';
+import { LogoService } from 'src/app/services/logo.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,12 +10,11 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class SidenavComponent implements OnInit {
 
-  logo2: string = "/assets/images/logo2.png";
-  logo1: string = "/assets/images/logo1.png";
+  logo?:String;
 
-  screen = new Observable<number>(observer => {
-    setInterval(() => observer.next(window.innerWidth), 1000)
-  })
+  // screen = new Observable<number>(observer => {
+  //   setInterval(() => observer.next(window.innerWidth), 1000)
+  // })
 
   user = "A.T. Repair Services";
 
@@ -22,13 +22,15 @@ export class SidenavComponent implements OnInit {
 
   linkId: any = 1;
 
-  constructor() { }
+  constructor(private logoService: LogoService) { }
 
   ngOnInit(): void {
-    this.screen.subscribe(width => {
-      console.log(width);
-      
-    })    
+    // this.screen.subscribe(width => {
+    //   console.log(width);      
+    // })    
+    this.logoService.getLogo().subscribe(logo => {
+      this.logo = logo;
+    });
   }
 
   toggleAsside(): void {

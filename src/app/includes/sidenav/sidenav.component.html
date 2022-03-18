@@ -5,7 +5,7 @@
             <div>
                 <div id="logo-container">
                     <div class="cont">
-                        <img [src]="logo1" id="logo" alt="">
+                        <img [src]="logo" id="logo" alt="">
                     </div>
                     <div id="user-info">
                         <strong>{{user}}</strong>
@@ -60,6 +60,24 @@
                         </li>
                     </ul>
                 </section>
+
+                <section>
+                    <label>
+                        <small>
+                            <span>Administrator</span>
+                        </small>
+                    </label>
+                    <ul>
+                        <li>
+                            <div class="aside-link" [ngClass]="{'selected' : linkId === 5}"
+                            (click)="toggleLinks(linkId=5)">
+                                <mat-icon>list_alt </mat-icon>
+                                <span class="list-text"> Products</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
                 <section class="hide-on-small-screen">
                     <hr>
                 </section>

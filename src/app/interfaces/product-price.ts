@@ -5,5 +5,6 @@ export interface ProductPrice {
     product:Product;
     orig:number;
     srp:number;
+    createdAt:any;
 }
 

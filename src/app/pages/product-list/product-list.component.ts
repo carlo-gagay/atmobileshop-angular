@@ -3,9 +3,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CheckoutComponent } from './checkout/checkout.component';
 
-import { Product } from 'src/app/interfaces/product';
-import { ProductService } from 'src/app/services/product.service';
-
+import { ProductPrice } from '../../interfaces/product-price';
+import { ProductPriceService } from '../../services/product-price.service';
+ 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -16,25 +16,25 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class ProductListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'description', 'quantity', 'actions'];
-  products: Product[] = [];
+  displayedColumns: string[] = ['id', 'name', 'description', 'quantity', 'srp', 'actions'];
+  productPrices:ProductPrice[] = [];
 
   dataSource : any;
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
-  constructor(private dialog: MatDialog, private productService: ProductService) { }
+  constructor(private dialog: MatDialog, private productPriceService: ProductPriceService) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   getProducts(): void {
-    this.productService.getProducts().subscribe(products => {
-      this.products = products;
-      this.dataSource = new MatTableDataSource<Product>(this.products)
+    this.productPriceService.getProductPrices().subscribe(productPrices => {
+      this.productPrices = productPrices;
+      this.dataSource = new MatTableDataSource<ProductPrice>(this.productPrices)
       this.dataSource.paginator = this.paginator;
-    })
+    });
   }
 
   openCheckOut(): void {

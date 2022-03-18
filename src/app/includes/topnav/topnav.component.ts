@@ -3,6 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 
 import { CartComponent } from 'src/app/pages/cart/cart.component';
 import { ProductListComponent } from 'src/app/pages/product-list/product-list.component';
+import { LogoService } from 'src/app/services/logo.service';
 
 @Component({
   selector: 'app-topnav',
@@ -13,14 +14,16 @@ export class TopnavComponent implements OnInit {
 
   title = "Repair Services";
 
-  logo1 = "/assets/images/logo1.png";
+  logo?:String;
 
   isAsideVisible = true;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private logoService: LogoService) { }
 
   ngOnInit(): void {
-
+    this.logoService.getLogo().subscribe(logo => {
+      this.logo = logo;
+    })
   }
 
   toggleAside() {
